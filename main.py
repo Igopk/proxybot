@@ -283,7 +283,7 @@ def onmessage(update,bot:ObigramClient):
                 except:
                     bot.sendMessage(update.message.chat.id,'❌Error en el comando /banuser username❌')
             else:
-                bot.sendMessage(update.message.chat.id,'❌Vete pa la pinga ❌')
+                bot.sendMessage(update.message.chat.id,'❌No Tiene Permiso❌')
             return
         if '/getdb' in msgText:
             isadmin = jdb.is_admin(username)
@@ -291,7 +291,7 @@ def onmessage(update,bot:ObigramClient):
                 bot.sendMessage(update.message.chat.id,'Base De Datos👇')
                 bot.sendFile(update.message.chat.id,'database.udb')
             else:
-                bot.sendMessage(update.message.chat.id,'❌Vete pa la pinga❌')
+                bot.sendMessage(update.message.chat.id,'❌No Tiene Permiso❌')
             return
         # end
 
@@ -442,7 +442,7 @@ def onmessage(update,bot:ObigramClient):
         thread.store('msg',message)
 
         if '/start' in msgText:
-            start_msg = '✅ Bot Iniciado habla matador ✅\n'
+            start_msg = '✅ Bot Iniciado ✅\n'
             start_msg += '❕Usa /help para mostrar la ayuda.\n'
             bot.editMessageText(message,start_msg)
 
@@ -557,7 +557,7 @@ def onmessage(update,bot:ObigramClient):
 
 
 def main():
-    bot_token = os.environ.get('5175117165:AAEb4We6cUOSnaXCTE8bACR_IEcjUlTEtYA')
+    bot_token = os.environ.get('bot_token')
     #set in debug
     bot_token = '5175117165:AAEb4We6cUOSnaXCTE8bACR_IEcjUlTEtYA'
 
